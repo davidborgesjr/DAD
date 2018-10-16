@@ -1,0 +1,104 @@
+07:16:14,284 INFO  [org.jboss.modules] JBoss Modules version 1.1.1.GA
+07:16:14,806 INFO  [org.jboss.msc] JBoss MSC version 1.0.2.GA
+07:16:14,848 INFO  [org.jboss.as] JBAS015899: JBoss AS 7.1.1.Final "Brontes" starting
+07:16:14,849 DEBUG [org.jboss.as.config] Configured system properties:
+	[Standalone] = 
+	awt.toolkit = sun.awt.X11.XToolkit
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final/jboss-modules.jar
+	java.class.version = 51.0
+	java.endorsed.dirs = /home/davidborges/Projetos/DAD/Arquivos externos/jdk1.7.0_80/jre/lib/endorsed
+	java.ext.dirs = /home/davidborges/Projetos/DAD/Arquivos externos/jdk1.7.0_80/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /home/davidborges/Projetos/DAD/Arquivos externos/jdk1.7.0_80/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/i386::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.7.0_80-b15
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Oracle Corporation
+	java.specification.version = 1.7
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Oracle Corporation
+	java.vendor.url = http://java.oracle.com/
+	java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+	java.version = 1.7.0_80
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Oracle Corporation
+	java.vm.specification.version = 1.7
+	java.vm.vendor = Oracle Corporation
+	java.vm.version = 24.80-b11
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.home.dir = /home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final
+	jboss.host.name = davidborges-ideapad320
+	jboss.modules.dir = /home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final/modules
+	jboss.node.name = davidborges-ideapad320
+	jboss.qualified.host.name = davidborges-ideapad320
+	jboss.server.base.dir = /home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final/standalone
+	jboss.server.config.dir = /home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final/standalone/configuration
+	jboss.server.data.dir = /home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final/standalone/data
+	jboss.server.deploy.dir = /home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final/standalone/data/content
+	jboss.server.log.dir = /home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final/standalone/log
+	jboss.server.name = davidborges-ideapad320
+	jboss.server.temp.dir = /home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final/standalone/configuration/logging.properties
+	module.path = /home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final/modules
+	org.jboss.boot.log.file = /home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final/standalone/log/boot.log
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 4.15.0-36-generic
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /home/davidborges/Projetos/DAD/Arquivos externos/jdk1.7.0_80/jre/lib/resources.jar:/home/davidborges/Projetos/DAD/Arquivos externos/jdk1.7.0_80/jre/lib/rt.jar:/home/davidborges/Projetos/DAD/Arquivos externos/jdk1.7.0_80/jre/lib/sunrsasign.jar:/home/davidborges/Projetos/DAD/Arquivos externos/jdk1.7.0_80/jre/lib/jsse.jar:/home/davidborges/Projetos/DAD/Arquivos externos/jdk1.7.0_80/jre/lib/jce.jar:/home/davidborges/Projetos/DAD/Arquivos externos/jdk1.7.0_80/jre/lib/charsets.jar:/home/davidborges/Projetos/DAD/Arquivos externos/jdk1.7.0_80/jre/lib/jfr.jar:/home/davidborges/Projetos/DAD/Arquivos externos/jdk1.7.0_80/jre/classes
+	sun.boot.library.path = /home/davidborges/Projetos/DAD/Arquivos externos/jdk1.7.0_80/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.desktop = gnome
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = /home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final/jboss-modules.jar -mp /home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final/modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -Djboss.home.dir=/home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	user.country = US
+	user.country.format = BR
+	user.dir = /home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final/bin
+	user.home = /home/davidborges
+	user.language = en
+	user.language.format = pt
+	user.name = davidborges
+	user.timezone = America/Manaus
+07:16:14,857 DEBUG [org.jboss.as.config] VM Arguments: -D[Standalone] -XX:+UseCompressedOops -XX:+TieredCompilation -Xms128m -Xmx512m -XX:MaxPermSize=256m -Dorg.jboss.boot.log.file=/home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final/standalone/log/boot.log -Dlogging.configuration=file:/home/davidborges/Projetos/DAD/Arquivos externos/jboss-as-7.1.1.Final/standalone/configuration/logging.properties 
+07:16:16,740 INFO  [org.xnio] XNIO Version 3.0.3.GA
+07:16:16,749 INFO  [org.xnio.nio] XNIO NIO Implementation Version 3.0.3.GA
+07:16:16,778 INFO  [org.jboss.as.server] JBAS015888: Creating http management service using socket-binding (management-http)
+07:16:16,807 INFO  [org.jboss.remoting] JBoss Remoting version 3.2.3.GA
+07:16:16,914 INFO  [org.jboss.as.logging] JBAS011502: Removing bootstrap log handlers
+07:16:48,522 INFO  [org.jboss.as.logging] JBAS011503: Restored bootstrap log handlers
+07:16:48,529 INFO  [org.jboss.as.jpa] JBAS011403: Stopping Persistence Unit Service 'ExercicioStateless.jar#ExercicioStateless'
+07:16:48,537 INFO  [org.jboss.as.server.deployment] JBAS015877: Stopped deployment ExercicioStateless.jar in 33ms
+07:16:48,540 INFO  [org.apache.catalina.core.StandardContext] Container org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/] has not been started
+07:16:48,550 INFO  [com.arjuna.ats.jbossatx] ARJUNA032018: Destroying TransactionManagerService
+07:16:48,551 INFO  [com.arjuna.ats.jbossatx] ARJUNA032014: Stopping transaction recovery manager
+07:16:48,553 INFO  [org.jboss.as.controller] JBAS014774: Service status report
+JBAS014776:    Newly corrected services:
+      service jboss.server.controller.management.security_realm.ApplicationRealm.properties_authentication (new available)
+
+07:16:48,556 INFO  [org.jboss.as] JBAS015950: JBoss AS 7.1.1.Final "Brontes" stopped in 36ms

@@ -1,0 +1,1 @@
+{"JBAS014653: Composite operation failed and was rolled back. Steps that failed:" => {"Operation step-2" => {"JBAS014671: Failed services" => {"jboss.persistenceunit.\"ExercicioStateful.jar#ExercicioStatefulPU\"" => "org.jboss.msc.service.StartException in service jboss.persistenceunit.\"ExercicioStateful.jar#ExercicioStatefulPU\": Failed to start service"}}}}
