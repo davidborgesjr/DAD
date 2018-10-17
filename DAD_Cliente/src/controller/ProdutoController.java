@@ -79,6 +79,7 @@ public final class ProdutoController {
                 if(pCodigo.equals(codigo) && pNome.equals(nome)){                               
                     this.service.remover(p);
                     this.tela.enviarMensagem("Produto excluido com sucesso!");
+                    break;
                 }            
             }
             

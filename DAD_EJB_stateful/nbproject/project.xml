@@ -7,6 +7,7 @@
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <explicit-platform explicit-source-supported="true"/>
             <included-library dirs="200">file.reference.jboss-modules.jar</included-library>
+            <included-library dirs="200">file.reference.Arquivos_externos-jboss-as-7.1.1.Final</included-library>
             <source-roots>
                 <root id="src.dir" name="Pacotes de Códigos-fonte"/>
             </source-roots>

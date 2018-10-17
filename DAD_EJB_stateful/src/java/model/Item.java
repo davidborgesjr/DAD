@@ -6,50 +6,70 @@
 package model;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
-/**
- *
- * @author Aluno
- */
-public class Item implements Serializable {
-    private  long Uid = 1L;
-    private String produto;
-    private Double valor;
-    private Integer QTD ;
+@Entity
+public class Item implements Serializable{
+    private static final long serialVersionUID = 1L;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int itemId;
+    
+    @ManyToOne
+    @JoinColumn(name="idProduto")
+    private Produto produto;
+    private int quantidade;
+    
+    public Item(){}
 
-    public Item() {
-    }
-
-    public Item(String produto, Double valor, Integer QTD) {
+    public Item(Produto produto, int quantidade) {
         this.produto = produto;
-        this.valor = valor;
-        this.QTD = QTD;
+        this.quantidade = quantidade;
     }
 
-    public String getProduto() {
+    
+    public Produto getProduto() {
         return produto;
     }
 
-    public void setProduto(String produto) {
+    public void setProduto(Produto produto) {
         this.produto = produto;
     }
 
-    public Double getValor() {
-        return valor;
+    public int getQuantidade() {
+        return quantidade;
     }
 
-    public void setValor(Double valor) {
-        this.valor = valor;
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+    
+    public Double getTotalItem(){
+        return this.quantidade * this.produto.getValor();
     }
 
-    public Integer getQTD() {
-        return QTD;
+    @Override
+    public boolean equals(Object obj) {
+        Item item = (Item) obj;
+        return this.produto.equals(item.produto);
     }
 
-    public void setQTD(Integer QTD) {
-        this.QTD = QTD;
+    public int getItemId() {
+        return itemId;
     }
-    
-    
-    
+
+    public void setItemId(int itemId) {
+        this.itemId = itemId;
+    }    
+
+    @Override
+    public String toString() {
+        return this.produto.getNome();
+    }    
 }
