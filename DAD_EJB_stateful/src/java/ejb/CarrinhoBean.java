@@ -13,7 +13,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import model.Compra;
 import model.Item;
-import remote.ICarrinhoBean;
 
 @Stateful
 @Remote(ICarrinhoBean.class)
@@ -47,6 +46,7 @@ public class CarrinhoBean implements ICarrinhoBean{
 
     @Override
     public List<Item> listar() {
+        System.out.println("Aqui dentro");
         return compra.getItens();
     }
     

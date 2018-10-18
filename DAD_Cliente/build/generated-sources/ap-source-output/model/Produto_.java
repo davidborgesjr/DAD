@@ -9,9 +9,9 @@ import javax.persistence.metamodel.StaticMetamodel;
 public abstract class Produto_ {
 
 	public static volatile SingularAttribute<Produto, String> codigo;
-	public static volatile SingularAttribute<Produto, Integer> id;
 	public static volatile SingularAttribute<Produto, Double> valor;
 	public static volatile SingularAttribute<Produto, String> nome;
+	public static volatile SingularAttribute<Produto, Integer> idProduto;
 
 }
 

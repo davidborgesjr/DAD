@@ -30,7 +30,7 @@ public class ProdutoDAO {
     }
     
     public void remover(Produto produto){
-        produto = this.em.find(Produto.class, produto.getId());
+        produto = this.em.find(Produto.class, produto.getIdProduto());
         this.em.remove(produto);
     }
     

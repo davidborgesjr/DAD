@@ -4,8 +4,7 @@
  * and open the template in the editor.
  */
 package mvc;
-
-import controller.ProdutoController;
+import controller.TelaPrincipalControlador;
 
 /**
  *
@@ -13,7 +12,7 @@ import controller.ProdutoController;
  */
 public class main {
     public static void main(String[]args){
-        ProdutoController controller = new ProdutoController();
+        TelaPrincipalControlador controller = new TelaPrincipalControlador();
     }
     
 }

@@ -22,7 +22,7 @@ import view.TelaGerenciarProduto;
  *
  * @author Aluno
  */
-public final class ProdutoController {
+public final class ProdutoControlador {
     private final TelaGerenciarProduto tela;
     private List<Produto> lista;
     private InitialContext contexto;
@@ -33,11 +33,11 @@ public final class ProdutoController {
             this.contexto = new InitialContext();           
             this.service = (IProdutoService) contexto.lookup("ejb:/ExercicioStateless/ProdutoService!ejb.IProdutoService?stateless");            
         } catch (NamingException ex) {
-            Logger.getLogger(ProdutoController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ProdutoControlador.class.getName()).log(Level.SEVERE, null, ex);
         }           
     }
     
-    public ProdutoController(){
+    public ProdutoControlador(){
         this.tela = new TelaGerenciarProduto();          
         this.tela.addBtnSalvar(new btnSalvar());
         this.tela.BtnExcluir(new BtnExcluir());
@@ -52,7 +52,7 @@ public final class ProdutoController {
             try {
                 salvar();
             } catch (NamingException ex) {
-                Logger.getLogger(ProdutoController.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(ProdutoControlador.class.getName()).log(Level.SEVERE, null, ex);
             }
         }    
     }
