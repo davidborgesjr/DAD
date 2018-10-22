@@ -5,14 +5,17 @@
  */
 package ejb;
 
+import java.util.Calendar;
 import java.util.List;
-import model.Compra;
+import model.Cliente;
 import model.Item;
 
 public interface ICarrinhoBean {
     public void inserir(Item item);
     public void remover(Item item);
+    public double valorGeral();
+    public double valorDesconto();
     public List<Item> listar();
-    public void finalizarCompra(Compra compra);
+    public void finalizarCompra(Calendar data, Cliente cliente, int desconto);
     
 }

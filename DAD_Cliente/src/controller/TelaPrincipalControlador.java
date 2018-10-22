@@ -26,6 +26,7 @@ public class TelaPrincipalControlador {
     class BtnProduto implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
+            tela.setVisible(false);
             ProdutoControlador controlador = new ProdutoControlador();
         }    
     }   
@@ -33,6 +34,7 @@ public class TelaPrincipalControlador {
     class BtnCompra implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
+            tela.setVisible(false);
             ItemCompraControlador controlador = new ItemCompraControlador();
         }    
     }  

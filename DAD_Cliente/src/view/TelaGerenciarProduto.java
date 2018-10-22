@@ -47,6 +47,10 @@ public class TelaGerenciarProduto extends javax.swing.JFrame {
         btnExcluir.addActionListener(listener);
     }
     
+    public void BtnVoltar(ActionListener listener){
+        btnVoltar.addActionListener(listener);
+    }
+    
     public String getCodigo(){
         return this.codigo;
     }
@@ -90,6 +94,7 @@ public class TelaGerenciarProduto extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         tabelaProduto = new javax.swing.JTable();
         btnExcluir = new javax.swing.JButton();
+        btnVoltar = new javax.swing.JButton();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -165,6 +170,8 @@ public class TelaGerenciarProduto extends javax.swing.JFrame {
 
         btnExcluir.setText("Excluir");
 
+        btnVoltar.setText("Voltar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -202,7 +209,9 @@ public class TelaGerenciarProduto extends javax.swing.JFrame {
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(15, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(btnVoltar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnExcluir)
                 .addGap(23, 23, 23))
         );
@@ -234,7 +243,9 @@ public class TelaGerenciarProduto extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                .addComponent(btnExcluir)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnExcluir)
+                    .addComponent(btnVoltar))
                 .addContainerGap())
         );
 
@@ -295,6 +306,7 @@ public class TelaGerenciarProduto extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnExcluir;
     private javax.swing.JButton btnSalvar;
+    private javax.swing.JButton btnVoltar;
     private javax.swing.JTextField campoCodigo;
     private javax.swing.JTextField campoNome;
     private javax.swing.JTextField campoValor;

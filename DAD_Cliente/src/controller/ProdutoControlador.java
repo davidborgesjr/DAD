@@ -8,6 +8,7 @@ package controller;
 import ejb.IProdutoService;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -41,6 +42,7 @@ public final class ProdutoControlador {
         this.tela = new TelaGerenciarProduto();          
         this.tela.addBtnSalvar(new btnSalvar());
         this.tela.BtnExcluir(new BtnExcluir());
+        this.tela.BtnVoltar(new BtnVoltar());
         this.IniciarService();
         this.carregar();
         this.tela.setVisible(true);             
@@ -64,6 +66,15 @@ public final class ProdutoControlador {
             carregar();
         }        
     }    
+    
+    class BtnVoltar implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            voltar();
+        }
+        
+    }
      
     public void removerProduto(){
         String codigo, nome;
@@ -101,6 +112,11 @@ public final class ProdutoControlador {
     public void setModeloTabela(){
         ProdutoTabelaModelo modelo = new ProdutoTabelaModelo(this.lista);
         this.tela.setTabelaProduto(modelo);
+    }
+    
+    public void voltar(){
+        this.tela.setVisible(false);
+        TelaPrincipalControlador controlador = new TelaPrincipalControlador();
     }
     
     

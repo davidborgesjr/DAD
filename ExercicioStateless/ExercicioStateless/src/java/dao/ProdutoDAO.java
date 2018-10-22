@@ -5,17 +5,22 @@
  */
 package dao;
 
-import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import javax.persistence.TypedQuery;
 import model.Produto;
 
 /*
 link do site: https://www.objectdb.com/java/jpa/query/execute
 hibernate
 em 10/10/2018
+
+Both Query and TypedQuery define a getResultList method, but the version
+of Query returns a result list of a raw type (non generic) 
+instead of a parameterized (generic) type
+    TypedQuery<Produto> query =
+    em.createQuery("select p from Produto p", Produto.class);
+    List<Produto> lista = query.getResultList();
 */
 
 public class ProdutoDAO {
@@ -34,22 +39,9 @@ public class ProdutoDAO {
         this.em.remove(produto);
     }
     
-    public List<Produto> listar(){
-        /*
-        Both Query and TypedQuery define a getResultList method, but the version
-        of Query returns a result list of a raw type (non generic) 
-        instead of a parameterized (generic) type
-        */
-        
-//        TypedQuery<Produto> query =
-//            em.createQuery("select p from Produto p", Produto.class);
-//        List<Produto> lista = query.getResultList();
-        
+    public List<Produto> listar(){              
         Query query = em.createQuery("select p from Produto p");
         List lista = query.getResultList();
-        
-        
-                           
         return lista;
     }
 }

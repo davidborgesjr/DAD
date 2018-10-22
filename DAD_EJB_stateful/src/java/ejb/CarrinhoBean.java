@@ -5,12 +5,15 @@
  */
 package ejb;
 
+import dao.ClienteDAO;
 import dao.CompraDAO;
+import java.util.Calendar;
 import java.util.List;
 import javax.ejb.Remote;
 import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import model.Cliente;
 import model.Compra;
 import model.Item;
 
@@ -46,15 +49,30 @@ public class CarrinhoBean implements ICarrinhoBean{
 
     @Override
     public List<Item> listar() {
-        System.out.println("Aqui dentro");
         return compra.getItens();
     }
     
     @Override
-    public void finalizarCompra(Compra compra){
+    public void finalizarCompra(Calendar data, Cliente cliente, int desconto){
+        ClienteDAO dao = new ClienteDAO(this.em);
+        dao.inserir(cliente);        
+        compra.setDataCompra(data);        
+        compra.addCliente(cliente);
+        compra.setDesconto(desconto);
         compraDAO = new CompraDAO(this.em);
-        compraDAO.finalizarCompra(compra);
+        compraDAO.finalizarCompra(this.compra);
     
+    }
+    
+    @Override
+    public double valorGeral(){
+        return compra.getTotalGeral();
+    }
+    
+    @Override
+    public double valorDesconto(){
+        return compra.getTotalGeralDesconto();
+        
     }
     
 }

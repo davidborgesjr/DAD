@@ -14,6 +14,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -27,7 +29,11 @@ public class Compra implements Serializable{
     @OneToMany
     private List<Item> itens;
     private Calendar dataCompra;
+    private int desconto;
    
+    @ManyToOne
+    @JoinColumn(name="idCliente")
+    private Cliente cliente;
     
     public Compra(){
         itens = new ArrayList<Item>();
@@ -55,8 +61,22 @@ public class Compra implements Serializable{
         for(Item item: itens){
             totalGeral+= item.getTotalItem();
         }
-        return totalGeral;
+        return totalGeral ;
     }
+    
+    public Double getTotalGeralDesconto(){
+        Double totalGeral = 0.0;
+        for(Item item: itens){
+            totalGeral+= item.getTotalItem();
+        }
+        return totalGeral  =  totalGeral * desconto;
+    }
+    
+    public void setDesconto(int desconto){
+        this.desconto = desconto/100;
+        
+    }
+    
     
     @Override
     public boolean equals(Object obj) {
@@ -72,6 +92,10 @@ public class Compra implements Serializable{
         this.compraId = compraId;
     }
     
+    public void addCliente(Cliente cliente){
+        this.cliente = cliente;
+    }
+        
     
     
 }
